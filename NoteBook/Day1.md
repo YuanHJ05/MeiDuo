@@ -165,3 +165,32 @@
         }
     - 创建日志目录 logs
 - 创建静态文件static
+    - 静态文件访问路径
+        ```
+        # 配置静态文件加载路径
+        STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+- 目录结构
+    - meiduo_mall
+        - apps: 应用目录
+        - libs: 第三方包
+        - settiongs: 配置文件目录
+        - static: 静态文件目录
+        - templates: 模板文件目录
+        - utils: 自己封装的代码
+# 用户模块
+- 在apps目录下创建应用app
+    ```
+    $ cd ~/projects/meiduo_project/meiduo_mall/meiduo_mall/apps
+    $ python ../../manage.py startapp users
+- 指定应用的导包路径为meiduo_mall/apps(dev_settings.py)
+    ```
+    sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
+- 注册app
+    ```
+    INSTALLED_APPS = [
+    ......
+    'users'
+    ]
+- 在apps目录上，右键，Mark Director as 选择Sources Root
+- 用户模型类
+    
