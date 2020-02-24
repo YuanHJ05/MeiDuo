@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'users'
+    'users',
+    'verifycation',
 ]
 
 MIDDLEWARE = [
@@ -197,3 +198,5 @@ LOGGING = {
 # logger.debug('测试logging模块debug')
 # logger.info('测试logging模块info')
 # logger.error('测试logging模块error')
+
+AUTH_USER_MODEL = 'users.User'

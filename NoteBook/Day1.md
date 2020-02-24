@@ -193,4 +193,16 @@
     ]
 - 在apps目录上，右键，Mark Director as 选择Sources Root
 - 用户模型类
-    
+    - 继承AbstractUser
+        ```
+        from django.db import models
+        from django.contrib.auth.models import AbstractUser
+
+
+        # Create your models here.
+        class User(AbstractUser):
+            mobile = models.CharField(max_length=11)
+    - 一定要指定项目用户模型类在dev_settings.py里面
+        ```
+        # AUTH_USER_MODEL = '应用名.模型类名'
+        AUTH_USER_MODEL = 'users.User'
