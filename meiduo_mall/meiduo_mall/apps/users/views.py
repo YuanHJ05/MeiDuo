@@ -47,12 +47,12 @@ class RegisterView(View):
         # 手机短信验证码
         # 读取redis中的短信验证码
         redis_cli = get_redis_connection('sms_code')
-        sms_code_redis = redis_cli.get(mobile)
+        sms_code_redis = redis_cli.get(mobile)  # bytes类型
         if sms_code_redis is None:
             return HttpResponseForbidden('短信验证码已经过期')
         redis_cli.delete(mobile)  # 从redis中删除短信验证码
         redis_cli.delete(mobile + '_flag')
-        if sms_code_redis != sms_code:
+        if sms_code_redis.decode() != sms_code:  # 要先转换为字符类型
             return HttpResponseForbidden('短信验证码错误！')
         # 处理
         # 1.创建用户对象

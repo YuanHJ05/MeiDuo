@@ -25,6 +25,8 @@
         </div>
         <div class="reg_form clearfix" id="app" v-cloak>
             <form method="post" class="register_form" @submit="on_submit" >
+{#                更改为jinja2模板后#}
+                {{ csrf_input }}
                 <ul>
                     <li>
                         <label>用户名:</label>

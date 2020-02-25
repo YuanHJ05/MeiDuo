@@ -59,7 +59,7 @@ class SmsCodeView(View):
         # redis_cli_sms.setex(mobile + '_flag', constans.SMS_CODE_FLAG, 1)
 
         # 优化：使用管道,减少和redis服务器的交互次数，提升服务器性能
-        redis_pl = redis_cli.pipeline()
+        redis_pl = redis_cli_sms.pipeline()
         redis_pl.setex(mobile, constans.SMS_CODE_EXPIRES, sms_code)
         redis_pl.setex(mobile + '_flag', constans.SMS_CODE_FLAG, 1)
         redis_pl.execute()
