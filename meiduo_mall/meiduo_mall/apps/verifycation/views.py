@@ -30,6 +30,11 @@ class SmsCodeView(View):
         uuid = request.GET.get('image_code_id')
         image_code = request.GET.get('image_code')
         # 验证
+        redis_cli_sms = get_redis_connection('sms_code')
+        # 验证是否在60秒内
+        if redis_cli_sms.get(mobile + '_flag') is not None:
+            return JsonResponse({'code': RETCODE.SMSCODERR, 'errmsg': '发送短信太频繁，请稍后再试！'})
+        # 非空
         if not all([uuid, image_code]):
             return JsonResponse({'code': RETCODE.PARAMERR, 'errmsg': '参数不完整'})
         # 验证图形验证码是否正确
@@ -44,12 +49,21 @@ class SmsCodeView(View):
         # 对比图形验证码
         if image_code_redis.decode().lower() != image_code.lower():  # 全部转换为小写，不区分大小分，根据业务需求来定
             return JsonResponse({'code': RETCODE.IMAGECODEERR, 'errmsg': '图像验证码错误'})
+
         # 处理
         # 1、生成随机6位数
         sms_code = random.randint(100000, 999999)
         # 2、存入redis
-        redis_cli_sms = get_redis_connection('sms_code')
-        redis_cli_sms.setex(mobile, constans.SMS_CODE_EXPIRES, sms_code)  # 键是mobile,值是sms_code
+        # redis_cli_sms.setex(mobile, constans.SMS_CODE_EXPIRES, sms_code)  # 键是mobile,值是sms_code
+        # 存入发送标记，时间
+        # redis_cli_sms.setex(mobile + '_flag', constans.SMS_CODE_FLAG, 1)
+
+        # 优化：使用管道,减少和redis服务器的交互次数，提升服务器性能
+        redis_pl = redis_cli.pipeline()
+        redis_pl.setex(mobile, constans.SMS_CODE_EXPIRES, sms_code)
+        redis_pl.setex(mobile + '_flag', constans.SMS_CODE_FLAG, 1)
+        redis_pl.execute()
+
         # 发送短信
         ccp = CCP()
         ccp.send_template_sms(mobile, [sms_code, constans.SMS_CODE_EXPIRES / 60], 1)

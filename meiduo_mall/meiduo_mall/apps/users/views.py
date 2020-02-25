@@ -4,6 +4,7 @@ from django.contrib.auth import login
 from django.views import View
 from .models import User
 from meiduo_mall.utils.response_code import *
+from django_redis import get_redis_connection
 import re
 
 
@@ -43,8 +44,16 @@ class RegisterView(View):
         # 手机号不能重复
         if User.objects.filter(mobile=mobile).count() > 0:
             return HttpResponseForbidden('手机号码不能重复！')
-        # 手机验证码
-
+        # 手机短信验证码
+        # 读取redis中的短信验证码
+        redis_cli = get_redis_connection('sms_code')
+        sms_code_redis = redis_cli.get(mobile)
+        if sms_code_redis is None:
+            return HttpResponseForbidden('短信验证码已经过期')
+        redis_cli.delete(mobile)  # 从redis中删除短信验证码
+        redis_cli.delete(mobile + '_flag')
+        if sms_code_redis != sms_code:
+            return HttpResponseForbidden('短信验证码错误！')
         # 处理
         # 1.创建用户对象
         user = User.objects.create(
@@ -52,6 +61,8 @@ class RegisterView(View):
             password=password,
             mobile=mobile
         )
+        # 存入数据库
+        user.save()
         # 2.状态保持(存入session)
         login(request, user)
 
