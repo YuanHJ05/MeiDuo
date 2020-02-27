@@ -27,7 +27,7 @@ SECRET_KEY = '2iz88m1tbu)m+!-vf)=!n6)gqx4b0gny&8h(p_wi1u&z&g+z*2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -84,7 +84,7 @@ DATABASES = {
         'HOST': '127.0.0.1',  # 数据库主机
         'PORT': 3306,  # 数据库端口
         'USER': 'root',  # 数据库用户名
-        'PASSWORD': '123456',  # 数据库用户密码
+        'PASSWORD': 'Centos7_Mysql_Test',  # 数据库用户密码
         'NAME': 'meiduo_mall'  # 数据库名字
     },
 }
@@ -130,28 +130,28 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 CACHES = {
     "default": {  # 默认
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://127.0.0.1:6379/0",  # 可改:ip,port,db
+        "LOCATION": "redis://:123456@127.0.0.1:6379/0",  # 可改:ip,port,db
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }
     },
     "session": {  # session
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://127.0.0.1:6379/1",
+        "LOCATION": "redis://:123456@127.0.0.1:6379/1",
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }
     },
     "image_code": {  # 图形验证码
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://127.0.0.1:6379/2",
+        "LOCATION": "redis://:123456@127.0.0.1:6379/2",
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }
     },
     "sms_code": {  # 图形验证码
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://127.0.0.1:6379/3",
+        "LOCATION": "redis://:123456@127.0.0.1:6379/3",
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }

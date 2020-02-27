@@ -12,6 +12,9 @@ flask = "*"
 pymysql = "*"
 django-redis = "*"
 pillow = "*"
+pika = "*"
+celery = "*"
+django-celery = "*"
 
 [requires]
 python_version = "3.7"

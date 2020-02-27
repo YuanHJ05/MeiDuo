@@ -1,0 +1,1122 @@
+WARNING 2020-02-23 15:58:09,484 base 93 Not Found: /
+WARNING 2020-02-23 15:58:09,484 basehttp 124 "GET / HTTP/1.1" 404 2086
+WARNING 2020-02-23 15:58:17,720 base 93 Not Found: /
+WARNING 2020-02-23 15:58:17,721 basehttp 124 "GET / HTTP/1.1" 404 2086
+INFO 2020-02-23 15:58:24,184 basehttp 124 "GET /register.html HTTP/1.1" 200 3062
+WARNING 2020-02-23 15:58:24,243 base 93 Not Found: /css/reset.css
+WARNING 2020-02-23 15:58:24,244 basehttp 124 "GET /css/reset.css HTTP/1.1" 404 2143
+WARNING 2020-02-23 15:58:24,257 base 93 Not Found: /css/main.css
+WARNING 2020-02-23 15:58:24,258 basehttp 124 "GET /css/main.css HTTP/1.1" 404 2140
+WARNING 2020-02-23 15:58:24,285 base 93 Not Found: /js/register.js
+WARNING 2020-02-23 15:58:24,286 basehttp 124 "GET /js/register.js HTTP/1.1" 404 2146
+WARNING 2020-02-23 15:58:24,316 base 93 Not Found: /images/pic_code.jpg
+WARNING 2020-02-23 15:58:24,319 basehttp 124 "GET /images/pic_code.jpg HTTP/1.1" 404 2161
+WARNING 2020-02-23 15:58:24,340 base 93 Not Found: /images/logo.png
+WARNING 2020-02-23 15:58:24,341 basehttp 124 "GET /images/logo.png HTTP/1.1" 404 2149
+ERROR 2020-02-23 15:59:46,767 exception 118 Internal Server Error: /register.html
+Traceback (most recent call last):
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\template\backends\jinja2.py", line 39, in get_template
+    return Template(self.env.get_template(template_name), self)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\loaders.py", line 129, in load
+    code = environment.compile(source, name, filename)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\yuanh\Desktop\MeiDuo\meiduo_mall\meiduo_mall\templates\register.html", line 8, in template
+    <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'static'.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\yuanh\Desktop\MeiDuo\meiduo_mall\meiduo_mall\apps\users\views.py", line 8, in get
+    return render(request, 'register.html')
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\template\backends\jinja2.py", line 45, in get_template
+    raise new from exc
+django.template.exceptions.TemplateSyntaxError: ("Encountered unknown tag 'static'.",)
+ERROR 2020-02-23 15:59:46,831 basehttp 124 "GET /register.html HTTP/1.1" 500 163391
+ERROR 2020-02-23 15:59:57,642 exception 118 Internal Server Error: /register.html
+Traceback (most recent call last):
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\template\backends\jinja2.py", line 39, in get_template
+    return Template(self.env.get_template(template_name), self)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\loaders.py", line 129, in load
+    code = environment.compile(source, name, filename)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\yuanh\Desktop\MeiDuo\meiduo_mall\meiduo_mall\templates\register.html", line 1, in template
+    {% load static %}
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'load'.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\yuanh\Desktop\MeiDuo\meiduo_mall\meiduo_mall\apps\users\views.py", line 8, in get
+    return render(request, 'register.html')
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\template\backends\jinja2.py", line 45, in get_template
+    raise new from exc
+django.template.exceptions.TemplateSyntaxError: ("Encountered unknown tag 'load'.",)
+ERROR 2020-02-23 15:59:57,685 basehttp 124 "GET /register.html HTTP/1.1" 500 160314
+ERROR 2020-02-23 15:59:58,404 exception 118 Internal Server Error: /register.html
+Traceback (most recent call last):
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\template\backends\jinja2.py", line 39, in get_template
+    return Template(self.env.get_template(template_name), self)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\loaders.py", line 129, in load
+    code = environment.compile(source, name, filename)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\yuanh\Desktop\MeiDuo\meiduo_mall\meiduo_mall\templates\register.html", line 1, in template
+    {% load static %}
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'load'.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\yuanh\Desktop\MeiDuo\meiduo_mall\meiduo_mall\apps\users\views.py", line 8, in get
+    return render(request, 'register.html')
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\template\backends\jinja2.py", line 45, in get_template
+    raise new from exc
+django.template.exceptions.TemplateSyntaxError: ("Encountered unknown tag 'load'.",)
+ERROR 2020-02-23 15:59:58,447 basehttp 124 "GET /register.html HTTP/1.1" 500 160314
+ERROR 2020-02-23 15:59:59,134 exception 118 Internal Server Error: /register.html
+Traceback (most recent call last):
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\template\backends\jinja2.py", line 39, in get_template
+    return Template(self.env.get_template(template_name), self)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\loaders.py", line 129, in load
+    code = environment.compile(source, name, filename)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\yuanh\Desktop\MeiDuo\meiduo_mall\meiduo_mall\templates\register.html", line 1, in template
+    {% load static %}
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'load'.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\yuanh\Desktop\MeiDuo\meiduo_mall\meiduo_mall\apps\users\views.py", line 8, in get
+    return render(request, 'register.html')
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\template\backends\jinja2.py", line 45, in get_template
+    raise new from exc
+django.template.exceptions.TemplateSyntaxError: ("Encountered unknown tag 'load'.",)
+ERROR 2020-02-23 15:59:59,178 basehttp 124 "GET /register.html HTTP/1.1" 500 160314
+ERROR 2020-02-23 16:00:46,432 exception 118 Internal Server Error: /register.html
+Traceback (most recent call last):
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\template\backends\jinja2.py", line 39, in get_template
+    return Template(self.env.get_template(template_name), self)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\loaders.py", line 129, in load
+    code = environment.compile(source, name, filename)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\yuanh\Desktop\MeiDuo\meiduo_mall\meiduo_mall\templates\register.html", line 1, in template
+    {% load staticfiles %}
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'load'.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\yuanh\Desktop\MeiDuo\meiduo_mall\meiduo_mall\apps\users\views.py", line 8, in get
+    return render(request, 'register.html')
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\template\backends\jinja2.py", line 45, in get_template
+    raise new from exc
+django.template.exceptions.TemplateSyntaxError: ("Encountered unknown tag 'load'.",)
+ERROR 2020-02-23 16:00:46,483 basehttp 124 "GET /register.html HTTP/1.1" 500 160322
+ERROR 2020-02-23 16:00:47,604 exception 118 Internal Server Error: /register.html
+Traceback (most recent call last):
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\template\backends\jinja2.py", line 39, in get_template
+    return Template(self.env.get_template(template_name), self)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\loaders.py", line 129, in load
+    code = environment.compile(source, name, filename)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\yuanh\Desktop\MeiDuo\meiduo_mall\meiduo_mall\templates\register.html", line 1, in template
+    {% load staticfiles %}
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'load'.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\yuanh\Desktop\MeiDuo\meiduo_mall\meiduo_mall\apps\users\views.py", line 8, in get
+    return render(request, 'register.html')
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\template\backends\jinja2.py", line 45, in get_template
+    raise new from exc
+django.template.exceptions.TemplateSyntaxError: ("Encountered unknown tag 'load'.",)
+ERROR 2020-02-23 16:00:47,645 basehttp 124 "GET /register.html HTTP/1.1" 500 160322
+ERROR 2020-02-23 16:04:32,885 exception 118 Internal Server Error: /register.html
+Traceback (most recent call last):
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\template\backends\jinja2.py", line 39, in get_template
+    return Template(self.env.get_template(template_name), self)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\loaders.py", line 129, in load
+    code = environment.compile(source, name, filename)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\yuanh\Desktop\MeiDuo\meiduo_mall\meiduo_mall\templates\register.html", line 10, in template
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'static'.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\yuanh\Desktop\MeiDuo\meiduo_mall\meiduo_mall\apps\users\views.py", line 8, in get
+    return render(request, 'register.html')
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\template\backends\jinja2.py", line 45, in get_template
+    raise new from exc
+django.template.exceptions.TemplateSyntaxError: ("Encountered unknown tag 'static'.",)
+ERROR 2020-02-23 16:04:32,930 basehttp 124 "GET /register.html HTTP/1.1" 500 163532
+INFO 2020-02-23 16:04:54,816 basehttp 124 "GET /register.html HTTP/1.1" 200 3816
+INFO 2020-02-23 16:04:54,844 basehttp 124 "GET /static/css/reset.css HTTP/1.1" 200 638
+INFO 2020-02-23 16:04:54,854 basehttp 124 "GET /static/css/main.css HTTP/1.1" 200 39722
+WARNING 2020-02-23 16:04:54,870 base 93 Not Found: /images/logo.png
+WARNING 2020-02-23 16:04:54,872 basehttp 124 "GET /images/logo.png HTTP/1.1" 404 2149
+WARNING 2020-02-23 16:04:54,879 base 93 Not Found: /images/pic_code.jpg
+WARNING 2020-02-23 16:04:54,880 basehttp 124 "GET /images/pic_code.jpg HTTP/1.1" 404 2161
+WARNING 2020-02-23 16:04:54,909 base 93 Not Found: /js/register.js
+WARNING 2020-02-23 16:04:54,910 basehttp 124 "GET /js/register.js HTTP/1.1" 404 2146
+INFO 2020-02-23 16:04:54,914 basehttp 124 "GET /static/images/interval_line.png HTTP/1.1" 200 1123
+INFO 2020-02-23 16:04:54,923 basehttp 124 "GET /static/images/register_banner.png HTTP/1.1" 200 54894
+INFO 2020-02-23 16:04:54,928 basehttp 124 "GET /static/images/icons02.png HTTP/1.1" 200 3935
+INFO 2020-02-23 16:05:42,735 basehttp 124 "GET /register.html HTTP/1.1" 200 3824
+INFO 2020-02-23 16:05:42,761 basehttp 124 "GET /static/images/logo.png HTTP/1.1" 200 7450
+WARNING 2020-02-23 16:05:42,768 base 93 Not Found: /images/pic_code.jpg
+WARNING 2020-02-23 16:05:42,768 basehttp 124 "GET /images/pic_code.jpg HTTP/1.1" 404 2161
+WARNING 2020-02-23 16:05:42,772 base 93 Not Found: /js/register.js
+WARNING 2020-02-23 16:05:42,773 basehttp 124 "GET /js/register.js HTTP/1.1" 404 2146
+INFO 2020-02-23 16:05:43,847 basehttp 124 "GET /register.html HTTP/1.1" 200 3824
+WARNING 2020-02-23 16:05:43,873 base 93 Not Found: /images/pic_code.jpg
+WARNING 2020-02-23 16:05:43,874 basehttp 124 "GET /images/pic_code.jpg HTTP/1.1" 404 2161
+WARNING 2020-02-23 16:05:43,878 base 93 Not Found: /js/register.js
+WARNING 2020-02-23 16:05:43,878 basehttp 124 "GET /js/register.js HTTP/1.1" 404 2146
+WARNING 2020-02-23 21:44:05,382 base 93 Not Found: /
+WARNING 2020-02-23 21:44:05,383 basehttp 124 "GET / HTTP/1.1" 404 2103
+WARNING 2020-02-23 21:44:05,492 base 93 Not Found: /favicon.ico
+WARNING 2020-02-23 21:44:05,493 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 2154
+INFO 2020-02-23 21:44:11,355 basehttp 124 "GET /register.html HTTP/1.1" 200 3824
+WARNING 2020-02-23 21:44:11,387 base 93 Not Found: /js/register.js
+WARNING 2020-02-23 21:44:11,387 basehttp 124 "GET /js/register.js HTTP/1.1" 404 2163
+WARNING 2020-02-23 21:44:11,395 base 93 Not Found: /images/pic_code.jpg
+WARNING 2020-02-23 21:44:11,396 basehttp 124 "GET /images/pic_code.jpg HTTP/1.1" 404 2178
+INFO 2020-02-23 22:31:55,080 basehttp 124 "GET /register.html HTTP/1.1" 200 3356
+WARNING 2020-02-23 22:31:55,107 base 93 Not Found: /css/main.css
+WARNING 2020-02-23 22:31:55,108 basehttp 124 "GET /css/main.css HTTP/1.1" 404 2157
+WARNING 2020-02-23 22:31:55,113 base 93 Not Found: /js/vue-2.5.16.js
+WARNING 2020-02-23 22:31:55,120 base 93 Not Found: /js/axios-0.18.0.min.js
+WARNING 2020-02-23 22:31:55,123 base 93 Not Found: /js/host.js
+WARNING 2020-02-23 22:31:55,123 basehttp 124 "GET /js/vue-2.5.16.js HTTP/1.1" 404 2169
+WARNING 2020-02-23 22:31:55,125 base 93 Not Found: /css/reset.css
+WARNING 2020-02-23 22:31:55,127 basehttp 124 "GET /js/axios-0.18.0.min.js HTTP/1.1" 404 2187
+WARNING 2020-02-23 22:31:55,127 basehttp 124 "GET /js/host.js HTTP/1.1" 404 2151
+WARNING 2020-02-23 22:31:55,127 basehttp 124 "GET /css/reset.css HTTP/1.1" 404 2160
+WARNING 2020-02-23 22:31:55,137 base 93 Not Found: /images/pic_code.jpg
+WARNING 2020-02-23 22:31:55,139 base 93 Not Found: /images/logo.png
+WARNING 2020-02-23 22:31:55,142 base 93 Not Found: /js/vue-2.5.16.js
+WARNING 2020-02-23 22:31:55,142 basehttp 124 "GET /images/pic_code.jpg HTTP/1.1" 404 2178
+WARNING 2020-02-23 22:31:55,143 basehttp 124 "GET /images/logo.png HTTP/1.1" 404 2166
+WARNING 2020-02-23 22:31:55,144 basehttp 124 "GET /js/vue-2.5.16.js HTTP/1.1" 404 2169
+WARNING 2020-02-23 22:31:55,153 base 93 Not Found: /js/common.js
+WARNING 2020-02-23 22:31:55,156 base 93 Not Found: /js/register.js
+WARNING 2020-02-23 22:31:55,158 basehttp 124 "GET /js/common.js HTTP/1.1" 404 2157
+WARNING 2020-02-23 22:31:55,161 base 93 Not Found: /js/axios-0.18.0.min.js
+WARNING 2020-02-23 22:31:55,161 basehttp 124 "GET /js/register.js HTTP/1.1" 404 2163
+WARNING 2020-02-23 22:31:55,162 basehttp 124 "GET /js/axios-0.18.0.min.js HTTP/1.1" 404 2187
+WARNING 2020-02-23 22:31:55,171 base 93 Not Found: /js/common.js
+WARNING 2020-02-23 22:31:55,171 basehttp 124 "GET /js/common.js HTTP/1.1" 404 2157
+WARNING 2020-02-23 22:31:55,199 base 93 Not Found: /js/register.js
+WARNING 2020-02-23 22:31:55,200 basehttp 124 "GET /js/register.js HTTP/1.1" 404 2163
+INFO 2020-02-23 22:31:56,346 basehttp 124 "GET /register.html HTTP/1.1" 200 3356
+WARNING 2020-02-23 22:31:56,382 base 93 Not Found: /css/reset.css
+WARNING 2020-02-23 22:31:56,384 basehttp 124 "GET /css/reset.css HTTP/1.1" 404 2160
+WARNING 2020-02-23 22:31:56,390 base 93 Not Found: /css/main.css
+WARNING 2020-02-23 22:31:56,393 base 93 Not Found: /js/host.js
+WARNING 2020-02-23 22:31:56,394 basehttp 124 "GET /css/main.css HTTP/1.1" 404 2157
+WARNING 2020-02-23 22:31:56,395 basehttp 124 "GET /js/host.js HTTP/1.1" 404 2151
+WARNING 2020-02-23 22:31:56,399 base 93 Not Found: /js/vue-2.5.16.js
+WARNING 2020-02-23 22:31:56,401 basehttp 124 "GET /js/vue-2.5.16.js HTTP/1.1" 404 2169
+WARNING 2020-02-23 22:31:56,404 base 93 Not Found: /js/axios-0.18.0.min.js
+WARNING 2020-02-23 22:31:56,408 base 93 Not Found: /images/logo.png
+WARNING 2020-02-23 22:31:56,410 base 93 Not Found: /images/pic_code.jpg
+WARNING 2020-02-23 22:31:56,411 basehttp 124 "GET /js/axios-0.18.0.min.js HTTP/1.1" 404 2187
+WARNING 2020-02-23 22:31:56,411 basehttp 124 "GET /images/logo.png HTTP/1.1" 404 2166
+WARNING 2020-02-23 22:31:56,412 basehttp 124 "GET /images/pic_code.jpg HTTP/1.1" 404 2178
+WARNING 2020-02-23 22:31:56,425 base 93 Not Found: /js/common.js
+WARNING 2020-02-23 22:31:56,428 base 93 Not Found: /js/register.js
+WARNING 2020-02-23 22:31:56,428 basehttp 124 "GET /js/common.js HTTP/1.1" 404 2157
+WARNING 2020-02-23 22:31:56,429 basehttp 124 "GET /js/register.js HTTP/1.1" 404 2163
+INFO 2020-02-23 22:34:16,951 basehttp 124 "GET /register.html HTTP/1.1" 200 3420
+INFO 2020-02-23 22:34:16,976 basehttp 124 "GET /static/js/host.js HTTP/1.1" 200 80
+INFO 2020-02-23 22:34:17,004 basehttp 124 "GET /static/js/vue-2.5.16.js HTTP/1.1" 200 289307
+WARNING 2020-02-23 22:34:17,020 base 93 Not Found: /images/pic_code.jpg
+WARNING 2020-02-23 22:34:17,021 basehttp 124 "GET /images/pic_code.jpg HTTP/1.1" 404 2178
+INFO 2020-02-23 22:34:17,022 basehttp 124 "GET /static/js/axios-0.18.0.min.js HTTP/1.1" 200 12941
+INFO 2020-02-23 22:34:17,035 basehttp 124 "GET /static/js/common.js HTTP/1.1" 200 891
+INFO 2020-02-23 22:34:17,036 basehttp 124 "GET /static/js/register.js HTTP/1.1" 200 19365
+WARNING 2020-02-23 22:34:17,099 base 93 Not Found: /images/pic_code.jpg
+WARNING 2020-02-23 22:34:17,101 basehttp 124 "GET /images/pic_code.jpg HTTP/1.1" 404 2178
+INFO 2020-02-23 22:37:22,346 basehttp 124 "GET /register.html HTTP/1.1" 200 4427
+WARNING 2020-02-23 22:37:22,405 base 93 Not Found: /images/pic_code.jpg
+WARNING 2020-02-23 22:37:22,405 basehttp 124 "GET /images/pic_code.jpg HTTP/1.1" 404 2178
+WARNING 2020-02-23 22:37:22,485 base 93 Not Found: /images/pic_code.jpg
+WARNING 2020-02-23 22:37:22,486 basehttp 124 "GET /images/pic_code.jpg HTTP/1.1" 404 2178
+INFO 2020-02-23 22:37:22,967 basehttp 124 "GET /register.html HTTP/1.1" 200 4427
+WARNING 2020-02-23 22:37:22,994 base 93 Not Found: /images/pic_code.jpg
+WARNING 2020-02-23 22:37:22,994 basehttp 124 "GET /images/pic_code.jpg HTTP/1.1" 404 2178
+INFO 2020-02-23 22:37:23,378 basehttp 124 "GET /register.html HTTP/1.1" 200 4427
+WARNING 2020-02-23 22:37:23,401 base 93 Not Found: /images/pic_code.jpg
+WARNING 2020-02-23 22:37:23,402 basehttp 124 "GET /images/pic_code.jpg HTTP/1.1" 404 2178
+INFO 2020-02-23 22:37:23,540 basehttp 124 "GET /register.html HTTP/1.1" 200 4427
+WARNING 2020-02-23 22:37:23,558 base 93 Not Found: /images/pic_code.jpg
+WARNING 2020-02-23 22:37:23,558 basehttp 124 "GET /images/pic_code.jpg HTTP/1.1" 404 2178
+WARNING 2020-02-23 22:37:23,588 base 93 Not Found: /images/pic_code.jpg
+WARNING 2020-02-23 22:37:23,590 basehttp 124 "GET /images/pic_code.jpg HTTP/1.1" 404 2178
+INFO 2020-02-23 22:37:23,668 basehttp 124 "GET /register.html HTTP/1.1" 200 4427
+WARNING 2020-02-23 22:37:23,692 base 93 Not Found: /images/pic_code.jpg
+WARNING 2020-02-23 22:37:23,693 basehttp 124 "GET /images/pic_code.jpg HTTP/1.1" 404 2178
+INFO 2020-02-23 22:37:25,465 basehttp 124 "GET /register.html HTTP/1.1" 200 4427
+WARNING 2020-02-23 22:37:25,488 base 93 Not Found: /images/pic_code.jpg
+WARNING 2020-02-23 22:37:25,489 basehttp 124 "GET /images/pic_code.jpg HTTP/1.1" 404 2178
+INFO 2020-02-23 22:37:29,555 basehttp 124 "GET /register.html HTTP/1.1" 200 4427
+WARNING 2020-02-23 22:37:29,577 base 93 Not Found: /images/pic_code.jpg
+WARNING 2020-02-23 22:37:29,578 basehttp 124 "GET /images/pic_code.jpg HTTP/1.1" 404 2178
+INFO 2020-02-23 22:37:30,184 basehttp 124 "GET /register.html HTTP/1.1" 200 4427
+WARNING 2020-02-23 22:37:30,209 base 93 Not Found: /images/pic_code.jpg
+WARNING 2020-02-23 22:37:30,209 basehttp 124 "GET /images/pic_code.jpg HTTP/1.1" 404 2178
+INFO 2020-02-23 22:37:30,375 basehttp 124 "GET /register.html HTTP/1.1" 200 4427
+WARNING 2020-02-23 22:37:30,395 base 93 Not Found: /images/pic_code.jpg
+WARNING 2020-02-23 22:37:30,396 basehttp 124 "GET /images/pic_code.jpg HTTP/1.1" 404 2178
+WARNING 2020-02-23 22:37:30,421 base 93 Not Found: /images/pic_code.jpg
+WARNING 2020-02-23 22:37:30,422 basehttp 124 "GET /images/pic_code.jpg HTTP/1.1" 404 2178
+INFO 2020-02-23 22:37:30,547 basehttp 124 "GET /register.html HTTP/1.1" 200 4427
+WARNING 2020-02-23 22:37:30,614 base 93 Not Found: /images/pic_code.jpg
+WARNING 2020-02-23 22:37:30,614 basehttp 124 "GET /images/pic_code.jpg HTTP/1.1" 404 2178
+INFO 2020-02-23 22:37:30,884 basehttp 124 "GET /register.html HTTP/1.1" 200 4427
+WARNING 2020-02-23 22:37:30,910 base 93 Not Found: /images/pic_code.jpg
+WARNING 2020-02-23 22:37:30,910 basehttp 124 "GET /images/pic_code.jpg HTTP/1.1" 404 2178
+INFO 2020-02-23 22:37:31,089 basehttp 124 "GET /register.html HTTP/1.1" 200 4427
+WARNING 2020-02-23 22:37:31,132 base 93 Not Found: /images/pic_code.jpg
+WARNING 2020-02-23 22:37:31,133 basehttp 124 "GET /images/pic_code.jpg HTTP/1.1" 404 2178
+WARNING 2020-02-23 22:37:31,158 base 93 Not Found: /images/pic_code.jpg
+WARNING 2020-02-23 22:37:31,159 basehttp 124 "GET /images/pic_code.jpg HTTP/1.1" 404 2178
+INFO 2020-02-23 22:42:39,024 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+INFO 2020-02-23 22:42:41,694 basehttp 124 "GET /register.html HTTP/1.1" 200 3824
+WARNING 2020-02-23 22:42:41,726 base 93 Not Found: /js/register.js
+WARNING 2020-02-23 22:42:41,727 basehttp 124 "GET /js/register.js HTTP/1.1" 404 2163
+WARNING 2020-02-23 22:42:41,882 base 93 Not Found: /images/pic_code.jpg
+WARNING 2020-02-23 22:42:41,883 basehttp 124 "GET /images/pic_code.jpg HTTP/1.1" 404 2178
+INFO 2020-02-23 22:42:42,938 basehttp 124 "GET /register.html HTTP/1.1" 200 3824
+WARNING 2020-02-23 22:42:42,961 base 93 Not Found: /images/pic_code.jpg
+WARNING 2020-02-23 22:42:42,965 base 93 Not Found: /js/register.js
+WARNING 2020-02-23 22:42:42,965 basehttp 124 "GET /images/pic_code.jpg HTTP/1.1" 404 2178
+WARNING 2020-02-23 22:42:42,966 basehttp 124 "GET /js/register.js HTTP/1.1" 404 2163
+INFO 2020-02-23 22:43:04,475 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+INFO 2020-02-23 22:43:11,862 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+INFO 2020-02-23 22:43:14,169 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+INFO 2020-02-23 22:43:14,794 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+INFO 2020-02-23 22:43:15,258 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+INFO 2020-02-23 22:43:15,428 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+INFO 2020-02-23 22:43:15,592 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+INFO 2020-02-23 22:43:15,748 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+INFO 2020-02-23 22:43:15,878 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+INFO 2020-02-23 22:43:16,008 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+INFO 2020-02-23 22:43:16,128 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+INFO 2020-02-23 22:43:16,360 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+INFO 2020-02-23 22:43:16,505 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+INFO 2020-02-23 22:43:16,650 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+INFO 2020-02-23 22:43:18,682 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+INFO 2020-02-23 22:43:19,027 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+INFO 2020-02-23 22:43:19,201 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+INFO 2020-02-23 22:43:19,379 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+INFO 2020-02-23 22:43:19,545 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+INFO 2020-02-23 22:43:19,687 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+INFO 2020-02-23 22:43:19,834 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+INFO 2020-02-23 22:43:19,977 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+INFO 2020-02-23 22:43:20,131 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+INFO 2020-02-23 22:43:21,091 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+INFO 2020-02-23 22:47:57,715 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+WARNING 2020-02-24 19:54:49,553 base 93 Not Found: /
+WARNING 2020-02-24 19:54:49,554 basehttp 124 "GET / HTTP/1.1" 404 2103
+WARNING 2020-02-24 19:54:49,719 base 93 Not Found: /favicon.ico
+WARNING 2020-02-24 19:54:49,720 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 2154
+INFO 2020-02-24 19:54:52,581 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+WARNING 2020-02-24 19:54:54,825 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+INFO 2020-02-24 20:05:39,296 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+WARNING 2020-02-24 20:05:39,451 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+INFO 2020-02-24 20:06:51,641 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+WARNING 2020-02-24 20:06:51,793 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+INFO 2020-02-24 20:06:53,111 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+WARNING 2020-02-24 20:06:53,177 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+INFO 2020-02-24 20:06:53,837 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+WARNING 2020-02-24 20:06:53,903 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+INFO 2020-02-24 20:07:08,423 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+WARNING 2020-02-24 20:07:08,481 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+INFO 2020-02-24 20:07:16,466 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+WARNING 2020-02-24 20:07:16,572 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+INFO 2020-02-24 20:07:54,507 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+WARNING 2020-02-24 20:07:54,581 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+INFO 2020-02-24 20:07:55,974 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+WARNING 2020-02-24 20:07:56,059 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+WARNING 2020-02-24 20:08:10,118 base 93 Not Found: /
+WARNING 2020-02-24 20:08:10,119 basehttp 124 "GET / HTTP/1.1" 404 2329
+INFO 2020-02-24 20:08:13,708 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+WARNING 2020-02-24 20:08:16,453 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+INFO 2020-02-24 20:08:55,435 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+INFO 2020-02-24 20:08:55,498 basehttp 124 "GET /static/css/reset.css HTTP/1.1" 200 638
+INFO 2020-02-24 20:08:55,538 basehttp 124 "GET /static/css/main.css HTTP/1.1" 200 39722
+INFO 2020-02-24 20:08:55,547 basehttp 124 "GET /static/js/host.js HTTP/1.1" 200 81
+INFO 2020-02-24 20:08:55,555 basehttp 124 "GET /static/js/vue-2.5.16.js HTTP/1.1" 200 289307
+INFO 2020-02-24 20:08:55,567 basehttp 124 "GET /static/js/axios-0.18.0.min.js HTTP/1.1" 200 12941
+INFO 2020-02-24 20:08:55,576 basehttp 124 "GET /static/images/logo.png HTTP/1.1" 200 7450
+INFO 2020-02-24 20:08:55,600 basehttp 124 "GET /static/js/register.js HTTP/1.1" 200 19365
+WARNING 2020-02-24 20:08:55,697 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+WARNING 2020-02-24 20:08:55,732 base 93 Not Found: /image_codes/7e6ae050-ebab-45dc-b0da-c4987ff99117/
+WARNING 2020-02-24 20:08:55,732 basehttp 124 "GET /image_codes/7e6ae050-ebab-45dc-b0da-c4987ff99117/ HTTP/1.1" 404 2494
+INFO 2020-02-24 20:08:55,750 basehttp 124 "GET /static/images/icons02.png HTTP/1.1" 200 3935
+INFO 2020-02-24 20:08:55,761 basehttp 124 "GET /static/images/register_banner.png HTTP/1.1" 200 54894
+INFO 2020-02-24 20:08:55,781 basehttp 124 "GET /static/images/interval_line.png HTTP/1.1" 200 1123
+INFO 2020-02-24 20:08:58,364 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+WARNING 2020-02-24 20:08:58,479 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+WARNING 2020-02-24 20:08:58,507 base 93 Not Found: /image_codes/8d2d0d16-4509-4b4c-9d25-37a210bf3a33/
+WARNING 2020-02-24 20:08:58,508 basehttp 124 "GET /image_codes/8d2d0d16-4509-4b4c-9d25-37a210bf3a33/ HTTP/1.1" 404 2494
+INFO 2020-02-24 20:08:59,251 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+WARNING 2020-02-24 20:08:59,353 base 93 Not Found: /image_codes/5b8a9485-fd09-4faf-9c78-341f71ce85ef/
+WARNING 2020-02-24 20:08:59,354 basehttp 124 "GET /image_codes/5b8a9485-fd09-4faf-9c78-341f71ce85ef/ HTTP/1.1" 404 2494
+WARNING 2020-02-24 20:08:59,377 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+INFO 2020-02-24 20:09:03,747 basehttp 124 "GET /usernames/yuanyuan/count/ HTTP/1.1" 200 41
+INFO 2020-02-24 20:11:46,920 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+INFO 2020-02-24 20:11:46,948 basehttp 124 "GET /static/js/host.js HTTP/1.1" 304 0
+WARNING 2020-02-24 20:11:47,005 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+WARNING 2020-02-24 20:11:47,014 base 93 Not Found: /image_codes/d9cd1f6d-4c93-4e8c-bd52-e640f5982d37/
+WARNING 2020-02-24 20:11:47,014 basehttp 124 "GET /image_codes/d9cd1f6d-4c93-4e8c-bd52-e640f5982d37/ HTTP/1.1" 404 2494
+INFO 2020-02-24 20:11:50,256 basehttp 124 "GET /usernames/yuanyuan/count/ HTTP/1.1" 200 41
+WARNING 2020-02-24 20:11:59,615 base 93 Not Found: /mobiles/17708346856/count/
+WARNING 2020-02-24 20:11:59,615 basehttp 124 "GET /mobiles/17708346856/count/ HTTP/1.1" 404 2425
+INFO 2020-02-24 20:31:41,464 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+INFO 2020-02-24 20:31:41,514 basehttp 124 "GET /static/js/host.js HTTP/1.1" 304 0
+WARNING 2020-02-24 20:31:41,603 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+WARNING 2020-02-24 20:31:41,606 base 93 Not Found: /image_codes/0714d4bc-e60c-4aa3-a2f0-3774f990b4cd/
+WARNING 2020-02-24 20:31:41,607 basehttp 124 "GET /image_codes/0714d4bc-e60c-4aa3-a2f0-3774f990b4cd/ HTTP/1.1" 404 2709
+INFO 2020-02-24 20:31:41,696 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+WARNING 2020-02-24 20:31:41,800 base 93 Not Found: /image_codes/20ee64b5-e200-44f8-90e3-4deb0a25c0aa/
+WARNING 2020-02-24 20:31:41,800 basehttp 124 "GET /image_codes/20ee64b5-e200-44f8-90e3-4deb0a25c0aa/ HTTP/1.1" 404 2709
+WARNING 2020-02-24 20:31:41,849 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+INFO 2020-02-24 20:31:41,870 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+WARNING 2020-02-24 20:31:42,008 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+WARNING 2020-02-24 20:31:42,082 base 93 Not Found: /image_codes/f6a5874f-1377-45ab-8b56-bafc5c0572de/
+WARNING 2020-02-24 20:31:42,082 basehttp 124 "GET /image_codes/f6a5874f-1377-45ab-8b56-bafc5c0572de/ HTTP/1.1" 404 2709
+INFO 2020-02-24 20:31:42,141 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+WARNING 2020-02-24 20:31:42,299 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+WARNING 2020-02-24 20:31:42,348 base 93 Not Found: /image_codes/226ed018-1d7a-4128-acd5-b1f82e69b840/
+WARNING 2020-02-24 20:31:42,349 basehttp 124 "GET /image_codes/226ed018-1d7a-4128-acd5-b1f82e69b840/ HTTP/1.1" 404 2709
+INFO 2020-02-24 20:31:45,006 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+WARNING 2020-02-24 20:31:45,095 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+WARNING 2020-02-24 20:31:45,120 base 93 Not Found: /image_codes/069048ee-16f6-416d-83c8-fec600ece8db/
+WARNING 2020-02-24 20:31:45,121 basehttp 124 "GET /image_codes/069048ee-16f6-416d-83c8-fec600ece8db/ HTTP/1.1" 404 2709
+INFO 2020-02-24 20:31:52,241 basehttp 124 "GET /usernames/yuanyuan/count/ HTTP/1.1" 200 41
+INFO 2020-02-24 20:31:54,339 basehttp 124 "GET /mobiles/17708346856/count/ HTTP/1.1" 200 41
+INFO 2020-02-24 21:24:57,000 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+INFO 2020-02-24 21:24:57,066 basehttp 124 "GET /static/js/host.js HTTP/1.1" 304 0
+WARNING 2020-02-24 21:24:57,210 base 93 Not Found: /image_codes/19e90f3e-af92-4b39-99ce-607f500c29b1/
+WARNING 2020-02-24 21:24:57,210 basehttp 124 "GET /image_codes/19e90f3e-af92-4b39-99ce-607f500c29b1/ HTTP/1.1" 404 2909
+WARNING 2020-02-24 21:24:57,258 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+INFO 2020-02-24 21:24:57,349 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+WARNING 2020-02-24 21:24:57,478 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+WARNING 2020-02-24 21:24:57,501 base 93 Not Found: /image_codes/daeaad4f-0118-4f51-bda3-9ce73a8f1c7b/
+WARNING 2020-02-24 21:24:57,502 basehttp 124 "GET /image_codes/daeaad4f-0118-4f51-bda3-9ce73a8f1c7b/ HTTP/1.1" 404 2909
+INFO 2020-02-24 21:26:32,386 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+WARNING 2020-02-24 21:26:32,600 base 93 Not Found: /image_codes/a6e3e5cb-d3a2-494a-866b-db63c8a0f15b/
+WARNING 2020-02-24 21:26:32,601 basehttp 124 "GET /image_codes/a6e3e5cb-d3a2-494a-866b-db63c8a0f15b/ HTTP/1.1" 404 2909
+WARNING 2020-02-24 21:26:32,625 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+WARNING 2020-02-24 21:26:38,438 base 93 Not Found: /image_codes/b0de38cb-4917-4b21-9887-77b9796c45ff/
+WARNING 2020-02-24 21:26:38,439 basehttp 124 "GET /image_codes/b0de38cb-4917-4b21-9887-77b9796c45ff/ HTTP/1.1" 404 2909
+INFO 2020-02-24 21:28:35,110 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+WARNING 2020-02-24 21:28:35,233 base 93 Not Found: /image_codes/80893e5e-924a-4c0b-bbc3-cee07b184249/
+WARNING 2020-02-24 21:28:35,234 basehttp 124 "GET /image_codes/80893e5e-924a-4c0b-bbc3-cee07b184249/ HTTP/1.1" 404 2910
+WARNING 2020-02-24 21:28:35,321 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+WARNING 2020-02-24 21:28:53,741 base 93 Not Found: /image_codes/a04b314a-2165-433c-9cab-37402970e775/
+WARNING 2020-02-24 21:28:53,741 basehttp 124 "GET /image_codes/a04b314a-2165-433c-9cab-37402970e775/ HTTP/1.1" 404 2910
+INFO 2020-02-24 21:29:45,506 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+INFO 2020-02-24 21:29:45,533 basehttp 124 "GET /static/css/reset.css HTTP/1.1" 200 638
+INFO 2020-02-24 21:29:45,540 basehttp 124 "GET /static/css/main.css HTTP/1.1" 200 39722
+INFO 2020-02-24 21:29:45,546 basehttp 124 "GET /static/js/host.js HTTP/1.1" 200 81
+INFO 2020-02-24 21:29:45,549 basehttp 124 "GET /static/js/axios-0.18.0.min.js HTTP/1.1" 200 12941
+INFO 2020-02-24 21:29:45,551 basehttp 124 "GET /static/js/vue-2.5.16.js HTTP/1.1" 200 289307
+INFO 2020-02-24 21:29:45,556 basehttp 124 "GET /static/images/logo.png HTTP/1.1" 200 7450
+INFO 2020-02-24 21:29:45,586 basehttp 124 "GET /static/js/register.js HTTP/1.1" 200 19365
+INFO 2020-02-24 21:29:45,618 basehttp 124 "GET /static/images/register_banner.png HTTP/1.1" 200 54894
+WARNING 2020-02-24 21:29:45,621 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+INFO 2020-02-24 21:29:45,627 basehttp 124 "GET /static/images/interval_line.png HTTP/1.1" 200 1123
+INFO 2020-02-24 21:29:45,649 basehttp 124 "GET /static/images/icons02.png HTTP/1.1" 200 3935
+WARNING 2020-02-24 21:29:45,686 base 93 Not Found: /image_codes/c119497e-b08b-48a5-916b-e2500a5770eb/
+WARNING 2020-02-24 21:29:45,687 basehttp 124 "GET /image_codes/c119497e-b08b-48a5-916b-e2500a5770eb/ HTTP/1.1" 404 2910
+INFO 2020-02-24 21:29:47,127 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+WARNING 2020-02-24 21:29:47,199 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+WARNING 2020-02-24 21:29:47,232 base 93 Not Found: /image_codes/e79d10d9-624f-4ac1-90a6-125c6b39692e/
+WARNING 2020-02-24 21:29:47,233 basehttp 124 "GET /image_codes/e79d10d9-624f-4ac1-90a6-125c6b39692e/ HTTP/1.1" 404 2910
+INFO 2020-02-24 21:29:47,800 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+WARNING 2020-02-24 21:29:47,864 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+WARNING 2020-02-24 21:29:47,901 base 93 Not Found: /image_codes/b94e0e14-7323-4943-b760-688bd4e333bf/
+WARNING 2020-02-24 21:29:47,901 basehttp 124 "GET /image_codes/b94e0e14-7323-4943-b760-688bd4e333bf/ HTTP/1.1" 404 2910
+INFO 2020-02-24 21:29:48,335 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+WARNING 2020-02-24 21:29:48,392 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+WARNING 2020-02-24 21:29:48,450 base 93 Not Found: /image_codes/fed845bc-ab66-4362-91fb-4cb9190e44ba/
+WARNING 2020-02-24 21:29:48,451 basehttp 124 "GET /image_codes/fed845bc-ab66-4362-91fb-4cb9190e44ba/ HTTP/1.1" 404 2910
+INFO 2020-02-24 21:30:14,562 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+WARNING 2020-02-24 21:30:14,769 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+INFO 2020-02-24 21:30:14,802 basehttp 124 "GET /image_codes/9306873c-a5f8-4c7d-b9cb-e2bb2ad5cb4e/ HTTP/1.1" 200 3429
+INFO 2020-02-24 21:30:19,409 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+WARNING 2020-02-24 21:30:19,478 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+INFO 2020-02-24 21:30:19,522 basehttp 124 "GET /image_codes/c2ecaab4-4abe-4612-9e84-b1c940133a26/ HTTP/1.1" 200 2945
+INFO 2020-02-24 21:30:21,381 basehttp 124 "GET /image_codes/a2e3fcb8-a2f5-4c5e-a847-da259c396bc4/ HTTP/1.1" 200 3082
+INFO 2020-02-24 21:30:22,753 basehttp 124 "GET /image_codes/8c876644-314a-4bfc-84f9-1564682528c1/ HTTP/1.1" 200 3071
+INFO 2020-02-24 21:34:07,562 basehttp 124 "GET /image_codes/75a1f023-35b7-45dd-8968-b52d7ce7f1e6/ HTTP/1.1" 200 3082
+INFO 2020-02-25 22:31:39,569 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+INFO 2020-02-25 22:31:39,996 basehttp 124 "GET /static/js/host.js HTTP/1.1" 304 0
+WARNING 2020-02-25 22:31:40,192 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+INFO 2020-02-25 22:31:40,543 basehttp 124 "GET /image_codes/3aeee5be-8789-4249-97b9-85f2c0631193/ HTTP/1.1" 200 3083
+INFO 2020-02-25 22:31:44,824 basehttp 124 "GET /mobiles/17708346856/count/ HTTP/1.1" 200 41
+INFO 2020-02-25 22:31:51,709 basehttp 124 "GET /mobiles/17708346856/count/ HTTP/1.1" 200 41
+ERROR 2020-02-25 22:31:58,470 exception 118 Internal Server Error: /sms_codes/17708346856/
+Traceback (most recent call last):
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\yuanh\Desktop\MeiDuo\meiduo_mall\meiduo_mall\apps\verifycation\views.py", line 30, in get
+    uuid = request.Get.get('image_code_id')
+AttributeError: 'WSGIRequest' object has no attribute 'Get'
+INFO 2020-02-25 22:31:58,512 basehttp 124 "GET /mobiles/17708346856/count/ HTTP/1.1" 200 41
+ERROR 2020-02-25 22:31:58,513 basehttp 124 "GET /sms_codes/17708346856/?image_code=T76C&image_code_id=3aeee5be-8789-4249-97b9-85f2c0631193 HTTP/1.1" 500 82902
+INFO 2020-02-25 22:36:38,857 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+INFO 2020-02-25 22:36:38,902 basehttp 124 "GET /static/css/reset.css HTTP/1.1" 200 638
+INFO 2020-02-25 22:36:39,064 basehttp 124 "GET /static/css/main.css HTTP/1.1" 200 39722
+WARNING 2020-02-25 22:36:39,092 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+INFO 2020-02-25 22:36:39,162 basehttp 124 "GET /image_codes/d0c3d06e-e907-4100-bdae-f165df0fafd3/ HTTP/1.1" 200 3015
+INFO 2020-02-25 22:36:40,754 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+WARNING 2020-02-25 22:36:40,854 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+INFO 2020-02-25 22:36:40,909 basehttp 124 "GET /image_codes/da185a08-ae0e-4f6a-a509-efe96be16274/ HTTP/1.1" 200 3196
+INFO 2020-02-25 22:36:42,667 basehttp 124 "GET /mobiles/17708346856/count/ HTTP/1.1" 200 41
+ERROR 2020-02-25 22:36:47,790 exception 118 Internal Server Error: /sms_codes/17708346856/
+Traceback (most recent call last):
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\yuanh\Desktop\MeiDuo\meiduo_mall\meiduo_mall\apps\verifycation\views.py", line 30, in get
+    uuid = request.Get.get('image_code_id')
+AttributeError: 'WSGIRequest' object has no attribute 'Get'
+INFO 2020-02-25 22:36:47,806 basehttp 124 "GET /mobiles/17708346856/count/ HTTP/1.1" 200 41
+ERROR 2020-02-25 22:36:47,827 basehttp 124 "GET /sms_codes/17708346856/?image_code=NSDA&image_code_id=da185a08-ae0e-4f6a-a509-efe96be16274 HTTP/1.1" 500 82902
+ERROR 2020-02-25 22:38:18,643 exception 118 Internal Server Error: /sms_codes/17708346856/
+Traceback (most recent call last):
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\yuanh\Desktop\MeiDuo\meiduo_mall\meiduo_mall\apps\verifycation\views.py", line 30, in get
+    uuid = request.Get.get('image_code_id')
+AttributeError: 'WSGIRequest' object has no attribute 'Get'
+ERROR 2020-02-25 22:38:18,669 basehttp 124 "GET /sms_codes/17708346856/?image_code=NSDA&image_code_id=da185a08-ae0e-4f6a-a509-efe96be16274 HTTP/1.1" 500 81744
+INFO 2020-02-25 22:39:35,989 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+WARNING 2020-02-25 22:39:36,074 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+INFO 2020-02-25 22:39:36,108 basehttp 124 "GET /image_codes/92192f51-fe4b-417d-8fb9-a9a14ccbb7c1/ HTTP/1.1" 200 3265
+INFO 2020-02-25 22:39:37,085 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+INFO 2020-02-25 22:39:37,232 basehttp 124 "GET /image_codes/da0123e5-c357-44bd-9c44-6d54896b4ced/ HTTP/1.1" 200 3173
+WARNING 2020-02-25 22:39:37,347 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+INFO 2020-02-25 22:39:40,303 basehttp 124 "GET /mobiles/17708346856/count/ HTTP/1.1" 200 41
+INFO 2020-02-25 22:39:43,895 basehttp 124 "GET /mobiles/17708346856/count/ HTTP/1.1" 200 41
+INFO 2020-02-25 22:39:44,068 basehttp 124 "GET /sms_codes/17708346856/?image_code=WN9P&image_code_id=da0123e5-c357-44bd-9c44-6d54896b4ced HTTP/1.1" 200 29
+INFO 2020-02-25 22:40:48,457 basehttp 124 "GET /mobiles/17708346856/count/ HTTP/1.1" 200 41
+INFO 2020-02-25 22:41:06,285 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+WARNING 2020-02-25 22:41:06,379 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+INFO 2020-02-25 22:41:06,481 basehttp 124 "GET /image_codes/1fbcaf2c-d5d7-41af-974c-1bbfaf9682c1/ HTTP/1.1" 200 3237
+INFO 2020-02-25 22:41:07,196 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+WARNING 2020-02-25 22:41:07,298 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+INFO 2020-02-25 22:41:07,379 basehttp 124 "GET /image_codes/8bb98aec-6354-400a-9a9c-dc7ef808dd95/ HTTP/1.1" 200 3400
+INFO 2020-02-25 22:41:07,813 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+WARNING 2020-02-25 22:41:07,881 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+INFO 2020-02-25 22:41:07,975 basehttp 124 "GET /image_codes/dde34ebb-417d-429c-87a6-d019180215ca/ HTTP/1.1" 200 3160
+INFO 2020-02-25 22:41:08,387 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+WARNING 2020-02-25 22:41:08,438 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+INFO 2020-02-25 22:41:08,670 basehttp 124 "GET /image_codes/bb529cf2-8695-49e1-96f0-78ec279837c3/ HTTP/1.1" 200 3440
+INFO 2020-02-25 22:41:54,061 basehttp 124 "GET /register.html HTTP/1.1" 200 4626
+WARNING 2020-02-25 22:41:54,133 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+INFO 2020-02-25 22:41:54,181 basehttp 124 "GET /image_codes/c298a870-812c-4fc4-a4a7-5f19d1ec001a/ HTTP/1.1" 200 3474
+INFO 2020-02-25 23:24:08,494 basehttp 124 "GET /usernames/yuanyuan/count/ HTTP/1.1" 200 41
+INFO 2020-02-25 23:24:17,356 basehttp 124 "GET /mobiles/17708346856/count/ HTTP/1.1" 200 41
+INFO 2020-02-25 23:24:18,105 basehttp 124 "GET /image_codes/8103cb4c-5f07-4c2b-be4a-504613adbdef/ HTTP/1.1" 200 3371
+INFO 2020-02-25 23:24:21,855 basehttp 124 "GET /mobiles/17708346856/count/ HTTP/1.1" 200 41
+INFO 2020-02-25 23:24:22,000 basehttp 124 "GET /sms_codes/17708346856/?image_code=DSME&image_code_id=8103cb4c-5f07-4c2b-be4a-504613adbdef HTTP/1.1" 200 29
+INFO 2020-02-25 23:24:36,573 basehttp 124 "GET /usernames/yuanyuan/count/ HTTP/1.1" 200 41
+WARNING 2020-02-25 23:24:36,610 csrf 153 Forbidden (CSRF token missing or incorrect.): /register.html
+WARNING 2020-02-25 23:24:36,614 basehttp 124 "POST /register.html HTTP/1.1" 403 2513
+INFO 2020-02-25 23:24:36,616 basehttp 124 "GET /mobiles/17708346856/count/ HTTP/1.1" 200 41
+WARNING 2020-02-25 23:25:13,228 csrf 153 Forbidden (CSRF token missing or incorrect.): /register.html
+WARNING 2020-02-25 23:25:13,229 basehttp 124 "POST /register.html HTTP/1.1" 403 2513
+INFO 2020-02-25 23:25:43,232 basehttp 124 "GET /static/js/host.js HTTP/1.1" 200 81
+INFO 2020-02-25 23:25:43,234 basehttp 124 "GET /static/js/vue-2.5.16.js HTTP/1.1" 200 289307
+INFO 2020-02-25 23:25:43,260 basehttp 124 "GET /static/js/axios-0.18.0.min.js HTTP/1.1" 200 12941
+INFO 2020-02-25 23:25:43,261 basehttp 124 "GET /static/images/logo.png HTTP/1.1" 200 7450
+INFO 2020-02-25 23:25:43,262 basehttp 124 "GET /static/js/register.js HTTP/1.1" 200 19365
+INFO 2020-02-25 23:25:43,289 basehttp 124 "GET /static/images/interval_line.png HTTP/1.1" 200 1123
+WARNING 2020-02-25 23:25:43,293 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+INFO 2020-02-25 23:25:43,299 basehttp 124 "GET /static/images/icons02.png HTTP/1.1" 200 3935
+INFO 2020-02-25 23:25:43,301 basehttp 124 "GET /static/images/register_banner.png HTTP/1.1" 200 54894
+INFO 2020-02-25 23:25:43,356 basehttp 124 "GET /image_codes/61b09476-8b6c-4252-bb8c-d120a9fc0924/ HTTP/1.1" 200 3392
+ERROR 2020-02-25 23:25:44,258 exception 118 Internal Server Error: /register.html
+Traceback (most recent call last):
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\template\backends\jinja2.py", line 39, in get_template
+    return Template(self.env.get_template(template_name), self)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\loaders.py", line 129, in load
+    code = environment.compile(source, name, filename)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\yuanh\Desktop\MeiDuo\meiduo_mall\meiduo_mall\templates\register.html", line 28, in template
+    {% csrf_token %}
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'csrf_token'.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\yuanh\Desktop\MeiDuo\meiduo_mall\meiduo_mall\apps\users\views.py", line 14, in get
+    return render(request, 'register.html')
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\template\backends\jinja2.py", line 45, in get_template
+    raise new from exc
+django.template.exceptions.TemplateSyntaxError: ("Encountered unknown tag 'csrf_token'.",)
+ERROR 2020-02-25 23:25:44,367 basehttp 124 "GET /register.html HTTP/1.1" 500 164274
+ERROR 2020-02-25 23:28:44,709 exception 118 Internal Server Error: /register.html
+Traceback (most recent call last):
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\template\backends\jinja2.py", line 39, in get_template
+    return Template(self.env.get_template(template_name), self)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\loaders.py", line 129, in load
+    code = environment.compile(source, name, filename)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\yuanh\Desktop\MeiDuo\meiduo_mall\meiduo_mall\templates\register.html", line 28, in template
+    {% csrf_token %}
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'csrf_token'.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\yuanh\Desktop\MeiDuo\meiduo_mall\meiduo_mall\apps\users\views.py", line 14, in get
+    return render(request, 'register.html')
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\yuanh\.virtualenvs\MeiDuo-t1hxlhXz\lib\site-packages\django\template\backends\jinja2.py", line 45, in get_template
+    raise new from exc
+django.template.exceptions.TemplateSyntaxError: ("Encountered unknown tag 'csrf_token'.",)
+ERROR 2020-02-25 23:28:44,778 basehttp 124 "GET /register.html HTTP/1.1" 500 164274
+INFO 2020-02-25 23:34:35,571 basehttp 124 "GET /register.html HTTP/1.1" 200 4770
+WARNING 2020-02-25 23:34:35,712 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+INFO 2020-02-25 23:34:35,831 basehttp 124 "GET /image_codes/8d9a0df0-83b9-419c-8b8f-70f3cc5c8ad5/ HTTP/1.1" 200 3407
+INFO 2020-02-25 23:34:36,931 basehttp 124 "GET /register.html HTTP/1.1" 200 4770
+WARNING 2020-02-25 23:34:37,007 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+INFO 2020-02-25 23:34:37,042 basehttp 124 "GET /image_codes/5f1c39ad-1c20-4398-8b63-64b6b5659a9d/ HTTP/1.1" 200 2891
+INFO 2020-02-25 23:34:39,245 basehttp 124 "GET /usernames/yuanyuan/count/ HTTP/1.1" 200 41
+INFO 2020-02-25 23:34:49,976 basehttp 124 "GET /mobiles/17708346856/count/ HTTP/1.1" 200 41
+INFO 2020-02-25 23:34:52,978 basehttp 124 "GET /sms_codes/17708346856/?image_code=FSSSS&image_code_id=5f1c39ad-1c20-4398-8b63-64b6b5659a9d HTTP/1.1" 200 72
+INFO 2020-02-25 23:34:53,000 basehttp 124 "GET /image_codes/720bfc8c-d5cf-4858-88a7-09f769216e4d/ HTTP/1.1" 200 3026
+INFO 2020-02-25 23:34:53,010 basehttp 124 "GET /mobiles/17708346856/count/ HTTP/1.1" 200 41
+INFO 2020-02-25 23:35:05,231 basehttp 124 "GET /mobiles/17708346856/count/ HTTP/1.1" 200 41
+INFO 2020-02-25 23:35:05,424 basehttp 124 "GET /sms_codes/17708346856/?image_code=FW5O&image_code_id=720bfc8c-d5cf-4858-88a7-09f769216e4d HTTP/1.1" 200 29
+INFO 2020-02-25 23:35:16,649 basehttp 124 "GET /usernames/yuanyuan/count/ HTTP/1.1" 200 41
+WARNING 2020-02-25 23:35:16,679 basehttp 124 "POST /register.html HTTP/1.1" 403 27
+INFO 2020-02-25 23:35:16,684 basehttp 124 "GET /mobiles/17708346856/count/ HTTP/1.1" 200 41
+WARNING 2020-02-25 23:35:25,742 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+INFO 2020-02-25 23:35:25,784 basehttp 124 "GET /image_codes/b9aa4faa-d63f-479c-bd5f-ee17114432e5/ HTTP/1.1" 200 3223
+INFO 2020-02-25 23:36:49,468 basehttp 124 "GET /register.html HTTP/1.1" 200 4768
+WARNING 2020-02-25 23:36:49,564 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+INFO 2020-02-25 23:36:49,681 basehttp 124 "GET /image_codes/5e8705dd-11d4-4ba6-8c64-983ee7dd9e35/ HTTP/1.1" 200 3089
+INFO 2020-02-25 23:36:49,933 basehttp 124 "GET /register.html HTTP/1.1" 200 4768
+WARNING 2020-02-25 23:36:49,993 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+INFO 2020-02-25 23:36:50,058 basehttp 124 "GET /image_codes/194ec0dd-8c84-499f-9163-bec0467aa253/ HTTP/1.1" 200 3425
+INFO 2020-02-25 23:36:51,605 basehttp 124 "GET /usernames/yuanyuan/count/ HTTP/1.1" 200 41
+INFO 2020-02-25 23:36:58,961 basehttp 124 "GET /mobiles/17708346856/count/ HTTP/1.1" 200 41
+INFO 2020-02-25 23:37:02,783 basehttp 124 "GET /mobiles/17708346856/count/ HTTP/1.1" 200 41
+INFO 2020-02-25 23:37:02,994 basehttp 124 "GET /sms_codes/17708346856/?image_code=aozc&image_code_id=194ec0dd-8c84-499f-9163-bec0467aa253 HTTP/1.1" 200 29
+INFO 2020-02-25 23:37:09,145 basehttp 124 "GET /usernames/yuanyuan/count/ HTTP/1.1" 200 41
+WARNING 2020-02-25 23:37:09,168 basehttp 124 "POST /register.html HTTP/1.1" 403 24
+INFO 2020-02-25 23:37:09,170 basehttp 124 "GET /mobiles/17708346856/count/ HTTP/1.1" 200 41
+WARNING 2020-02-25 23:37:11,994 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+INFO 2020-02-25 23:37:12,097 basehttp 124 "GET /image_codes/37d7efc1-9011-4e50-a8b0-5cc908cb8964/ HTTP/1.1" 200 3493
+INFO 2020-02-25 23:37:47,779 basehttp 124 "GET /register.html HTTP/1.1" 200 4768
+WARNING 2020-02-25 23:37:47,839 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+INFO 2020-02-25 23:37:47,905 basehttp 124 "GET /image_codes/3ae6063a-0d4d-4898-b28c-7671717461f1/ HTTP/1.1" 200 3143
+INFO 2020-02-25 23:37:48,034 basehttp 124 "GET /register.html HTTP/1.1" 200 4768
+WARNING 2020-02-25 23:37:48,100 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+INFO 2020-02-25 23:37:48,184 basehttp 124 "GET /image_codes/b35bdc72-d5b3-4da7-8f8a-cbc74724ee10/ HTTP/1.1" 200 3201
+INFO 2020-02-25 23:37:48,373 basehttp 124 "GET /register.html HTTP/1.1" 200 4768
+WARNING 2020-02-25 23:37:48,437 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+INFO 2020-02-25 23:37:48,501 basehttp 124 "GET /image_codes/5694106e-f3b4-43d8-8911-94ffe6165e55/ HTTP/1.1" 200 3332
+INFO 2020-02-25 23:37:50,123 basehttp 124 "GET /usernames/yuanyuan/count/ HTTP/1.1" 200 41
+INFO 2020-02-25 23:37:57,159 basehttp 124 "GET /mobiles/17708346856/count/ HTTP/1.1" 200 41
+INFO 2020-02-25 23:38:01,139 basehttp 124 "GET /mobiles/17708346856/count/ HTTP/1.1" 200 41
+INFO 2020-02-25 23:38:01,346 basehttp 124 "GET /sms_codes/17708346856/?image_code=6mlg&image_code_id=5694106e-f3b4-43d8-8911-94ffe6165e55 HTTP/1.1" 200 29
+INFO 2020-02-25 23:38:13,771 basehttp 124 "GET /usernames/yuanyuan/count/ HTTP/1.1" 200 41
+WARNING 2020-02-25 23:38:13,776 basehttp 124 "POST /register.html HTTP/1.1" 403 24
+WARNING 2020-02-25 23:39:31,558 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+INFO 2020-02-25 23:39:31,620 basehttp 124 "GET /image_codes/09f86fa9-2621-4a20-bf5a-6c1a2436aac5/ HTTP/1.1" 200 2993
+INFO 2020-02-25 23:39:32,258 basehttp 124 "GET /register.html HTTP/1.1" 200 4768
+WARNING 2020-02-25 23:39:32,313 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+INFO 2020-02-25 23:39:32,353 basehttp 124 "GET /image_codes/9e6baabf-3f0e-47dd-958d-11fc92ad55a4/ HTTP/1.1" 200 3051
+INFO 2020-02-25 23:39:32,663 basehttp 124 "GET /register.html HTTP/1.1" 200 4768
+WARNING 2020-02-25 23:39:32,719 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+INFO 2020-02-25 23:39:32,772 basehttp 124 "GET /image_codes/871bbfb2-dcf4-46e6-8e1c-af4ef9c565d2/ HTTP/1.1" 200 3119
+INFO 2020-02-25 23:39:32,860 basehttp 124 "GET /register.html HTTP/1.1" 200 4768
+WARNING 2020-02-25 23:39:32,921 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+INFO 2020-02-25 23:39:32,977 basehttp 124 "GET /image_codes/644ada92-7836-464a-ae44-8e76a06fcbff/ HTTP/1.1" 200 3233
+INFO 2020-02-25 23:39:33,032 basehttp 124 "GET /register.html HTTP/1.1" 200 4768
+WARNING 2020-02-25 23:39:33,095 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+INFO 2020-02-25 23:39:33,153 basehttp 124 "GET /image_codes/ded347e6-41cb-4540-81ff-16b6bb66afcc/ HTTP/1.1" 200 3404
+INFO 2020-02-25 23:39:33,371 basehttp 124 "GET /register.html HTTP/1.1" 200 4768
+WARNING 2020-02-25 23:39:33,446 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+INFO 2020-02-25 23:39:33,522 basehttp 124 "GET /image_codes/dbf11ec8-9a9c-4484-afe4-d9d8a621d583/ HTTP/1.1" 200 3294
+INFO 2020-02-25 23:40:55,410 basehttp 124 "GET /register.html HTTP/1.1" 200 4768
+WARNING 2020-02-25 23:40:55,567 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+INFO 2020-02-25 23:40:55,700 basehttp 124 "GET /image_codes/bafaa79b-987e-4fb9-b26a-990feb17043a/ HTTP/1.1" 200 3167
+INFO 2020-02-25 23:41:02,875 basehttp 124 "GET /mobiles/17708346856/count/ HTTP/1.1" 200 41
+INFO 2020-02-25 23:41:05,831 basehttp 124 "GET /mobiles/17708346856/count/ HTTP/1.1" 200 41
+INFO 2020-02-25 23:41:06,262 basehttp 124 "GET /sms_codes/17708346856/?image_code=zjde&image_code_id=bafaa79b-987e-4fb9-b26a-990feb17043a HTTP/1.1" 200 29
+INFO 2020-02-25 23:41:28,464 basehttp 124 "GET /usernames/yuanyuan/count/ HTTP/1.1" 200 41
+WARNING 2020-02-25 23:41:28,518 basehttp 124 "POST /register.html HTTP/1.1" 403 24
+INFO 2020-02-25 23:41:54,062 basehttp 124 "GET /register.html HTTP/1.1" 200 4768
+WARNING 2020-02-25 23:41:54,176 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+INFO 2020-02-25 23:41:54,371 basehttp 124 "GET /image_codes/eac24595-8eec-45e3-b646-53a711a10d61/ HTTP/1.1" 200 3260
+INFO 2020-02-25 23:41:54,944 basehttp 124 "GET /register.html HTTP/1.1" 200 4768
+WARNING 2020-02-25 23:41:55,004 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1672
+INFO 2020-02-25 23:41:55,039 basehttp 124 "GET /image_codes/790d4b6e-cdf4-4d0c-b340-33d4cd3efa85/ HTTP/1.1" 200 3216
+INFO 2020-02-25 23:41:56,220 basehttp 124 "GET /usernames/yuanyuan/count/ HTTP/1.1" 200 41
+INFO 2020-02-25 23:42:03,252 basehttp 124 "GET /mobiles/17708346856/count/ HTTP/1.1" 200 41
+INFO 2020-02-25 23:42:07,394 basehttp 124 "GET /mobiles/17708346856/count/ HTTP/1.1" 200 41
+INFO 2020-02-25 23:42:07,603 basehttp 124 "GET /sms_codes/17708346856/?image_code=kgbh&image_code_id=790d4b6e-cdf4-4d0c-b340-33d4cd3efa85 HTTP/1.1" 200 29
+INFO 2020-02-25 23:42:14,225 basehttp 124 "GET /usernames/yuanyuan/count/ HTTP/1.1" 200 41
+INFO 2020-02-25 23:42:14,312 basehttp 124 "GET /mobiles/17708346856/count/ HTTP/1.1" 200 41
+INFO 2020-02-25 23:42:14,388 basehttp 124 "POST /register.html HTTP/1.1" 302 0
+WARNING 2020-02-25 23:42:14,431 base 93 Not Found: /
+WARNING 2020-02-25 23:42:14,432 basehttp 124 "GET / HTTP/1.1" 404 2949
+WARNING 2020-02-27 13:36:09,685 base 93 Not Found: /
+WARNING 2020-02-27 13:36:09,685 basehttp 124 "GET / HTTP/1.1" 404 2954
+WARNING 2020-02-27 13:36:09,836 base 93 Not Found: /favicon.ico
+WARNING 2020-02-27 13:36:09,837 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 3005
+INFO 2020-02-27 13:36:17,367 basehttp 124 "GET /register.html HTTP/1.1" 200 4768
+INFO 2020-02-27 13:36:17,425 basehttp 124 "GET /static/css/reset.css HTTP/1.1" 200 638
+INFO 2020-02-27 13:36:17,462 basehttp 124 "GET /static/css/main.css HTTP/1.1" 200 39722
+INFO 2020-02-27 13:36:17,464 basehttp 124 "GET /static/js/host.js HTTP/1.1" 200 81
+INFO 2020-02-27 13:36:17,470 basehttp 124 "GET /static/js/axios-0.18.0.min.js HTTP/1.1" 200 12941
+INFO 2020-02-27 13:36:17,471 basehttp 124 "GET /static/js/register.js HTTP/1.1" 200 19365
+INFO 2020-02-27 13:36:17,501 basehttp 124 "GET /static/images/logo.png HTTP/1.1" 200 7450
+INFO 2020-02-27 13:36:17,884 basehttp 124 "GET /static/js/vue-2.5.16.js HTTP/1.1" 200 289307
+INFO 2020-02-27 13:36:18,892 basehttp 124 "GET /static/images/interval_line.png HTTP/1.1" 200 1123
+INFO 2020-02-27 13:36:18,894 basehttp 124 "GET /static/images/register_banner.png HTTP/1.1" 200 54894
+INFO 2020-02-27 13:36:18,903 basehttp 124 "GET /static/images/icons02.png HTTP/1.1" 200 3935
+INFO 2020-02-27 13:37:14,871 basehttp 124 "GET /register.html HTTP/1.1" 200 4768
+WARNING 2020-02-27 13:37:18,543 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1677
+INFO 2020-02-27 13:37:27,682 basehttp 124 "GET /register.html HTTP/1.1" 200 4768
+WARNING 2020-02-27 13:37:27,802 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1677
+INFO 2020-02-27 13:38:56,560 basehttp 124 "GET /register.html HTTP/1.1" 200 4768
+WARNING 2020-02-27 13:38:56,678 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1677
+INFO 2020-02-27 13:38:58,622 basehttp 124 "GET /register.html HTTP/1.1" 200 4768
+WARNING 2020-02-27 13:38:58,715 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1677
+INFO 2020-02-27 13:39:11,138 basehttp 124 "GET /register.html HTTP/1.1" 200 4768
+INFO 2020-02-27 13:39:11,200 basehttp 124 "GET /static/css/reset.css HTTP/1.1" 200 638
+INFO 2020-02-27 13:39:11,234 basehttp 124 "GET /static/css/main.css HTTP/1.1" 200 39722
+INFO 2020-02-27 13:39:11,236 basehttp 124 "GET /static/js/host.js HTTP/1.1" 200 122
+INFO 2020-02-27 13:39:11,243 basehttp 124 "GET /static/js/axios-0.18.0.min.js HTTP/1.1" 200 12941
+INFO 2020-02-27 13:39:11,246 basehttp 124 "GET /static/js/register.js HTTP/1.1" 200 19365
+INFO 2020-02-27 13:39:11,277 basehttp 124 "GET /static/images/logo.png HTTP/1.1" 200 7450
+INFO 2020-02-27 13:39:11,338 basehttp 124 "GET /static/js/vue-2.5.16.js HTTP/1.1" 200 289307
+ERROR 2020-02-27 13:39:12,664 exception 118 Internal Server Error: /image_codes/afd5b8fb-91ad-41b4-9770-57acaba4b589/
+Traceback (most recent call last):
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/MeiDuo/meiduo_mall/meiduo_mall/apps/verifycation/views.py", line 22, in get
+    redis_cli.setex(uuid, constans.IMAGE_CODE_EXPIRES, code)
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/redis/client.py", line 1787, in setex
+    return self.execute_command('SETEX', name, time, value)
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/redis/client.py", line 875, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/redis/connection.py", line 1185, in get_connection
+    connection.connect()
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/redis/connection.py", line 561, in connect
+    self.on_connect()
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/redis/connection.py", line 658, in on_connect
+    if nativestr(self.read_response()) != 'OK':
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/redis/connection.py", line 734, in read_response
+    response = self._parser.read_response()
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/redis/connection.py", line 333, in read_response
+    raise error
+redis.exceptions.AuthenticationError: Authentication required.
+INFO 2020-02-27 13:39:12,708 basehttp 124 "GET /static/images/interval_line.png HTTP/1.1" 200 1123
+INFO 2020-02-27 13:39:12,712 basehttp 124 "GET /static/images/register_banner.png HTTP/1.1" 200 54894
+INFO 2020-02-27 13:39:12,712 basehttp 124 "GET /static/images/icons02.png HTTP/1.1" 200 3935
+WARNING 2020-02-27 13:39:12,715 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1677
+INFO 2020-02-27 13:39:21,189 basehttp 124 "GET /register.html HTTP/1.1" 200 4768
+INFO 2020-02-27 13:39:21,249 basehttp 124 "GET /static/js/host.js HTTP/1.1" 304 0
+WARNING 2020-02-27 13:39:21,354 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1677
+ERROR 2020-02-27 13:39:21,401 exception 118 Internal Server Error: /image_codes/6a6ba297-5c53-4ef6-9627-1b069f0f26b5/
+Traceback (most recent call last):
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/MeiDuo/meiduo_mall/meiduo_mall/apps/verifycation/views.py", line 22, in get
+    redis_cli.setex(uuid, constans.IMAGE_CODE_EXPIRES, code)
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/redis/client.py", line 1787, in setex
+    return self.execute_command('SETEX', name, time, value)
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/redis/client.py", line 875, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/redis/connection.py", line 1185, in get_connection
+    connection.connect()
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/redis/connection.py", line 561, in connect
+    self.on_connect()
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/redis/connection.py", line 658, in on_connect
+    if nativestr(self.read_response()) != 'OK':
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/redis/connection.py", line 734, in read_response
+    response = self._parser.read_response()
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/redis/connection.py", line 333, in read_response
+    raise error
+redis.exceptions.AuthenticationError: Authentication required.
+INFO 2020-02-27 13:45:40,645 basehttp 124 "GET /register.html HTTP/1.1" 200 4768
+INFO 2020-02-27 13:45:40,709 basehttp 124 "GET /static/js/host.js HTTP/1.1" 304 0
+ERROR 2020-02-27 13:45:40,850 exception 118 Internal Server Error: /image_codes/09016dcd-c026-41d9-8ef7-09eb22badece/
+Traceback (most recent call last):
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/redis/connection.py", line 637, in on_connect
+    auth_response = self.read_response()
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/redis/connection.py", line 752, in read_response
+    raise response
+redis.exceptions.AuthenticationWrongNumberOfArgsError: wrong number of arguments for 'auth' command
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/MeiDuo/meiduo_mall/meiduo_mall/apps/verifycation/views.py", line 22, in get
+    redis_cli.setex(uuid, constans.IMAGE_CODE_EXPIRES, code)
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/redis/client.py", line 1787, in setex
+    return self.execute_command('SETEX', name, time, value)
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/redis/client.py", line 875, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/redis/connection.py", line 1185, in get_connection
+    connection.connect()
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/redis/connection.py", line 561, in connect
+    self.on_connect()
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/redis/connection.py", line 643, in on_connect
+    self.send_command('AUTH', self.password, check_health=False)
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/redis/connection.py", line 720, in send_command
+    self.send_packed_command(self.pack_command(*args),
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/redis/connection.py", line 771, in pack_command
+    for arg in imap(self.encoder.encode, args):
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/redis/connection.py", line 121, in encode
+    "bytes, string, int or float first." % typename)
+redis.exceptions.DataError: Invalid input of type: 'NoneType'. Convert to a bytes, string, int or float first.
+WARNING 2020-02-27 13:45:40,867 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1677
+INFO 2020-02-27 13:45:49,271 basehttp 124 "GET /register.html HTTP/1.1" 200 4768
+WARNING 2020-02-27 13:45:49,398 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1677
+ERROR 2020-02-27 13:45:49,451 exception 118 Internal Server Error: /image_codes/a6c4c9fe-0939-44e5-81d7-bc4e379fd0e7/
+Traceback (most recent call last):
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/redis/connection.py", line 637, in on_connect
+    auth_response = self.read_response()
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/redis/connection.py", line 752, in read_response
+    raise response
+redis.exceptions.AuthenticationWrongNumberOfArgsError: wrong number of arguments for 'auth' command
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/MeiDuo/meiduo_mall/meiduo_mall/apps/verifycation/views.py", line 22, in get
+    redis_cli.setex(uuid, constans.IMAGE_CODE_EXPIRES, code)
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/redis/client.py", line 1787, in setex
+    return self.execute_command('SETEX', name, time, value)
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/redis/client.py", line 875, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/redis/connection.py", line 1185, in get_connection
+    connection.connect()
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/redis/connection.py", line 561, in connect
+    self.on_connect()
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/redis/connection.py", line 643, in on_connect
+    self.send_command('AUTH', self.password, check_health=False)
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/redis/connection.py", line 720, in send_command
+    self.send_packed_command(self.pack_command(*args),
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/redis/connection.py", line 771, in pack_command
+    for arg in imap(self.encoder.encode, args):
+  File "/root/.local/share/virtualenvs/MeiDuo-IUgg7w3-/lib/python3.7/site-packages/redis/connection.py", line 121, in encode
+    "bytes, string, int or float first." % typename)
+redis.exceptions.DataError: Invalid input of type: 'NoneType'. Convert to a bytes, string, int or float first.
+INFO 2020-02-27 13:46:21,819 basehttp 124 "GET /register.html HTTP/1.1" 200 4768
+INFO 2020-02-27 13:46:21,891 basehttp 124 "GET /static/js/host.js HTTP/1.1" 304 0
+INFO 2020-02-27 13:46:22,021 basehttp 124 "GET /image_codes/4c4816d8-bb4b-42af-b495-74ed62afc121/ HTTP/1.1" 200 3101
+WARNING 2020-02-27 13:46:22,033 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1677
+INFO 2020-02-27 13:46:24,389 basehttp 124 "GET /register.html HTTP/1.1" 200 4768
+WARNING 2020-02-27 13:46:24,489 basehttp 124 "GET /static/js/axios.min.map HTTP/1.1" 404 1677
+INFO 2020-02-27 13:46:24,566 basehttp 124 "GET /image_codes/b4d5a2cc-a89d-424b-8276-cd44d74585db/ HTTP/1.1" 200 3317
+INFO 2020-02-27 13:46:25,681 basehttp 124 "GET /image_codes/6fd253fb-6535-4cdd-8952-b949dbbcd35c/ HTTP/1.1" 200 3396
+INFO 2020-02-27 13:46:26,933 basehttp 124 "GET /image_codes/03c898d9-dda3-4109-8856-d30818ec63b2/ HTTP/1.1" 200 3283
+INFO 2020-02-27 13:47:10,744 basehttp 124 "GET /usernames/YuanHJ/count/ HTTP/1.1" 200 41
+INFO 2020-02-27 13:47:18,204 basehttp 124 "GET /mobiles/17708346856/count/ HTTP/1.1" 200 41
+INFO 2020-02-27 13:47:22,997 basehttp 124 "GET /mobiles/17708346856/count/ HTTP/1.1" 200 41
+INFO 2020-02-27 13:47:23,411 basehttp 124 "GET /sms_codes/17708346856/?image_code=SBVI&image_code_id=03c898d9-dda3-4109-8856-d30818ec63b2 HTTP/1.1" 200 29
+INFO 2020-02-27 13:47:30,066 basehttp 124 "GET /usernames/YuanHJ/count/ HTTP/1.1" 200 41
+INFO 2020-02-27 13:47:30,072 basehttp 124 "GET /mobiles/17708346856/count/ HTTP/1.1" 200 41
+INFO 2020-02-27 13:47:30,078 basehttp 124 "POST /register.html HTTP/1.1" 302 0
+WARNING 2020-02-27 13:47:30,169 base 93 Not Found: /
+WARNING 2020-02-27 13:47:30,170 basehttp 124 "GET / HTTP/1.1" 404 2954
